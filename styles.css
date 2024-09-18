@@ -1,0 +1,264 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #2e2e2e;
+    color: #fff;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    background-color: #07381a;
+    color: #e7c4c4;
+    width: 20%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    box-sizing: border-box;
+    overflow-y: auto;
+    position: fixed;
+}
+
+.sidebar h3 {
+    color: #ffffff;
+}
+
+.profile-section {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.profile-picture img {
+    border-radius: 50%;
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+}
+
+.name {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+.designation {
+    font-size: 15px;
+    color: #ebadad;
+    margin-top: -3px;
+}
+
+/* Sidebar Content Alignment */
+.details,
+.links,
+.skills,
+.hobbies {
+    text-align: left;
+    width: 100%;
+    padding: 5px 10px;
+    margin-bottom: 2px;
+}
+
+.details a.ui,
+.links a {
+    color: #ebadad;
+}
+
+/* Align email icon with email text */
+.details p {
+    display: flex;
+    align-items: center;
+}
+
+.details p i {
+    margin-right: 10px;
+}
+
+.no-list-style {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skills ul,
+.hobbies ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+/* Main content styling */
+.main-content {
+    padding: 15px;
+    margin-left: 20%;
+    width: 80%;
+    max-width: 700px;
+    height: 100vh;
+    overflow-y: auto;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+.main-content h2 {
+    margin-top: 0;
+}
+
+/* Style for dates in main content */
+.main-content .date {
+    color: gray;
+}
+
+/* Adjusting the alignment and spacing for the date and subheading */
+.education .ab, 
+.courses .cd, 
+.internships .ab {
+    margin-top: 3px;
+    font-weight: bold;
+}
+
+.education .a, 
+.courses .a, 
+.internships .a {
+    margin-bottom: 10px;
+    color: gray;
+    font-weight: normal;
+    margin-top: -18px; /* Bring the date closer to subheadings */
+}
+
+/* Dark Mode for main content */
+body.dark-mode .main-content {
+    background-color: #11191d;
+    color: #fff;
+}
+
+.toggle-container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    margin-top: 25px;
+    margin-right: 150px;
+}
+
+/* Section Styling */
+.education h2,
+.courses h2,
+.internships h2,
+.projects h2 {
+    font-weight: bold;
+    margin: 20px 0 5px;
+}
+
+/* Proper margin and spacing for date elements */
+.education .a,
+.courses .a,
+.internships .a {
+    margin-top: -13px; /* Close the gap between date and subheading */
+    font-weight: normal;
+    color: #666;
+}
+
+/* GitHub icon */
+.github-icon {
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    margin-left: 10px;
+}
+
+/* Links in the sidebar */
+.links a {
+    color: #ebadad;
+    text-decoration: underline;
+   
+}
+
+
+.links ul li {
+    margin-bottom: 5px;
+    
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+        text-align: center;
+    }
+
+    .main-content {
+        margin-left: 0;
+        width: 100%;
+        padding: 15px;
+    }
+
+    .profile-picture img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .name {
+        font-size: 18px;
+    }
+
+    .designation {
+        font-size: 14px;
+        margin-top: 0;
+    }
+
+    .details,
+    .links,
+    .skills,
+    .hobbies {
+        padding: 5px 0;
+    }
+
+    /* Reduce padding in sidebar for smaller screens */
+    .sidebar {
+        padding: 10px;
+    }
+
+    .education .a,
+    .courses .a,
+    .internships .a {
+        margin-top: -10px; /* Adjust spacing for dates on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-picture img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .name {
+        font-size: 16px;
+    }
+
+    .designation {
+        font-size: 12px;
+    }
+
+    .sidebar {
+        padding: 5px;
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .education .a,
+    .courses .a,
+    .internships .a {
+        margin-top: -12px; /* Further adjustment for mobile devices */
+    }
+}
